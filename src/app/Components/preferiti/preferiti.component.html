@@ -1,7 +1,16 @@
-<h1>LISTA DEI PREFERITI</h1>
+<h1 class="text-center my-5">LISTA DEI PREFERITI</h1>
 
-<ul>
-  <li *ngFor="let pref of prefs">
-    <h4>{{ pref.title }}</h4>
-  </li>
-</ul>
+<div class="container">
+  <div class="row">
+    <div class="card col-4 m-3" style="width: 18rem" *ngFor="let pref of prefs">
+      <img src="{{ pref.images[0] }}" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">{{ pref.title }}</h5>
+        <p class="card-text">
+          {{ pref.description }}
+        </p>
+        <a class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>
